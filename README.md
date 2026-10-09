@@ -6,7 +6,7 @@ It's designed to sit alongside **MATE Panel**, mainly on Debian 13 with MATE/Mar
 
 ## What it can do?
 
-<img width="800" height="600" alt="example" src="https://github.com/user-attachments/assets/c491b3ab-e6dc-4ce8-8fb6-49ba84fc47b7" />
+<img width="799" height="599" alt="preview1" src="https://github.com/user-attachments/assets/66a350f8-b85f-4c5f-8644-724667e9108c" />
 
 
 - Keep application launchers handy.
