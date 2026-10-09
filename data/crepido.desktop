@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Crepido
+Comment=GTK3/X11 dock with application launchers and Drawers
+Exec=crepido
+TryExec=crepido
+OnlyShowIn=MATE;
+NoDisplay=true
+Terminal=false
+StartupNotify=false
+X-MATE-Autostart-enabled=true

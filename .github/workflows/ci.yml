@@ -1,0 +1,61 @@
+name: Build and test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes \
+            build-essential \
+            meson \
+            pkg-config \
+            libgtk-3-dev \
+            libx11-dev \
+            libxrandr-dev \
+            xvfb \
+            xauth \
+            desktop-file-utils
+
+      - name: Validate MATE autostart desktop entry
+        run: desktop-file-validate data/crepido.desktop
+
+      - name: Configure
+        run: meson setup build --prefix=/usr --sysconfdir=/etc
+
+      - name: Compile
+        run: meson compile -C build
+
+      - name: Run regression tests
+        run: meson test -C build --print-errorlogs
+
+      - name: Verify staged system installation
+        run: |
+          install_root="$RUNNER_TEMP/crepido-stage"
+          meson install -C build --destdir "$install_root"
+
+          test -x "$install_root/usr/bin/crepido"
+          test -f "$install_root/etc/xdg/autostart/crepido.desktop"
+          desktop-file-validate "$install_root/etc/xdg/autostart/crepido.desktop"
+          grep -Fxq 'OnlyShowIn=MATE;' \
+            "$install_root/etc/xdg/autostart/crepido.desktop"
+
+      - name: Verify installation without MATE autostart
+        run: |
+          meson configure build -Dinstall_mate_autostart=false
+
+          install_root="$RUNNER_TEMP/crepido-stage-no-autostart"
+          meson install -C build --destdir "$install_root"
+
+          test -x "$install_root/usr/bin/crepido"
+          test ! -e "$install_root/etc/xdg/autostart/crepido.desktop"
