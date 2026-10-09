@@ -7452,7 +7452,32 @@ dock_about_menu_item_activated(
         NULL;
 
     const gchar *authors[] = {
-        "loonylynn",
+        "Crepido author: loonylynn",
+        "MATE Panel upstream contributors:",
+        "Perberos",
+        "Steve Zesch",
+        "Stefano Karapetsas",
+        "GNOME Panel upstream contributors:",
+        "George Lebl",
+        "Jacob Berkman",
+        "Miguel de Icaza",
+        "Federico Mena",
+        "Tom Tromey",
+        "Ian Main",
+        "Elliot Lee",
+        "Owen Taylor",
+        "Mark McLoughlin",
+        "Alex Larsson",
+        "Martin Baulig",
+        "Seth Nickell",
+        "Darin Adler",
+        "Glynn Foster",
+        "Stephen Browne",
+        "Anders Carlsson",
+        "Padraig O'Briain",
+        "Ian McKellar",
+        "Arvind Samptur",
+        "Vincent Untz",
         NULL
     };
 
@@ -7472,12 +7497,16 @@ dock_about_menu_item_activated(
         "Crepido",
         "version",
         "0.1.0",
+        "copyright",
+        "Copyright © 1997-2003 Free Software Foundation, Inc.\n"
+        "Copyright © 2004 Vincent Untz\n"
+        "Copyright © 2011-2021 MATE developers",
         "comments",
         "A GTK3/X11 desktop Dock with application launchers, Drawers, and "
         "minimized-window handling. Designed for MATE/Marco on X11 and "
         "intended to complement the desktop's normal panel.",
         "website",
-        "https://github.com/loonylynn/crepido-gtk3",
+        "https://github.com/loonylynn/crepido",
         "website-label",
         "Crepido project page",
         "authors",
