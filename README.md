@@ -4,9 +4,10 @@ Crepido is a little GTK 3 dock for Linux. It's a **passion project made for fun*
 
 It's designed to sit alongside **MATE Panel**, mainly on Debian 13 with MATE/Marco and X11. It isn't a replacement for the panel, and it doesn't support Wayland. Window Maker was an inspiration for some of its behavior, but isn't needed to run it.
 
-## What it can do
+## What it can do?
 
-<img width="800" height="600" alt="example" src="https://github.com/user-attachments/assets/7eedfd50-1d24-4d51-a045-80e25324912a" />
+<img width="800" height="600" alt="example" src="https://github.com/user-attachments/assets/c491b3ab-e6dc-4ce8-8fb6-49ba84fc47b7" />
+
 
 - Keep application launchers handy.
 - Group launchers in expandable Drawers.
@@ -14,7 +15,7 @@ It's designed to sit alongside **MATE Panel**, mainly on Debian 13 with MATE/Mar
 - Place the Dock on a selected monitor and screen edge.
 - Customize icon size, opacity, and bitmap backgrounds.
 
-## Build and run
+## Instructions
 
 Crepido is designed for Debian 13 with MATE/Marco on X11.
 
@@ -35,10 +36,10 @@ meson setup build
 meson compile -C build
 ```
 
-Already cloned the repository? Skip the first two commands and run the build
-commands from your Crepido folder. To rebuild later, use `meson compile -C build`.
+Skip the first two commands and run the build
+commands from your Crepido folder if this isn't your first time cloning the repo. To rebuild later, use `meson compile -C build`.
 
-### 3. Run Crepido
+### 3. Running Crepido
 
 ```sh
 ./build/crepido
@@ -47,7 +48,7 @@ commands from your Crepido folder. To rebuild later, use `meson compile -C build
 This runs Crepido for your current session without installing it system-wide.
 For installation and optional autostart, see [the install guide](docs/INSTALLING.md).
 
-## A few things to know
+## DISCLAIMER
 
 - The main target is MATE/Marco on X11. Other setups may or may not work.
 - Crepido is experimental hobby software. Back up your configuration and use your own judgment before installing it system-wide.
