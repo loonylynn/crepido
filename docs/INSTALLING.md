@@ -1,6 +1,6 @@
 # Installing Crepido
 
-Crepido is a DIY hobby project. These notes are provided as-is for people who want to build and try it themselves. The main target is Debian 13 with MATE/Marco on X11.
+These notes are provided as-is for people who want to build and try it themselves. The main target is Debian 13 with MATE/Marco on X11.
 
 ## Build and run without installing
 
