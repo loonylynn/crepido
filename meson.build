@@ -15,6 +15,7 @@ m = meson.get_compiler('c').find_library('m', required: false)
 executable(
   'crepido',
   'src/main.c',
+  'src/dock-clip.c',
   'src/dock-monitor.c',
   'src/dock.c',
   'src/dock-dnd.c',

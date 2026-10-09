@@ -13,10 +13,12 @@
 #include "dock.h"
 #include "dock-config.h"
 #include "dock-monitor.h"
+#include "dock-clip.h"
 
 #define DOCK_TILE_SIZE 64
 
 static GtkWidget *dock_window = NULL;
+static DockClip *workspace_clip = NULL;
 
 static gint
 find_monitor_by_identity(
@@ -295,6 +297,7 @@ activate(GtkApplication *app, gpointer user_data)
 
     gtk_widget_show_all(window);
 
+
     dock_set_opacity(
         dock,
         dock_get_opacity(dock));
@@ -337,6 +340,9 @@ activate(GtkApplication *app, gpointer user_data)
         dock,
         dock_get_monitor_index(dock));
 
+    /* The Clip uses the same selected monitor, opacity and stacking mode. */
+    workspace_clip = dock_clip_new(dock);
+
     /*
      * The Dock stays alive for the application's lifetime. It is freed
      * by the application shutdown path below.
@@ -357,6 +363,11 @@ shutdown_dock(void)
 {
     if (!dock_window)
         return;
+
+    if (workspace_clip) {
+        dock_clip_free(workspace_clip);
+        workspace_clip = NULL;
+    }
 
     GtkWidget *window = g_object_ref(dock_window);
     Dock *dock =
