@@ -1,6 +1,6 @@
 # Crepido
 
-Crepido is a little GTK 3 dock for Linux. It's a **passion project made for fun**, not a commercial product or a polished, officially supported desktop component. It's shared as-is; things may be rough around the edges.
+Crepido is a little GTK3 dock for Linux. It's a **passion project made for fun**, not a commercial product or a polished, officially supported desktop component. Things may be rough around the edges.
 
 It's designed to sit alongside **MATE Panel**, mainly on Debian 13 with MATE/Marco and X11. It isn't a replacement for the panel, and it doesn't support Wayland. Window Maker was an inspiration for some of its behavior, but isn't needed to run it.
 
@@ -18,7 +18,7 @@ It's designed to sit alongside **MATE Panel**, mainly on Debian 13 with MATE/Mar
 
 ## Instructions
 
-Crepido is designed for Debian 13 with MATE/Marco on X11.
+Requirements
 
 ### 1. Install dependencies
 
@@ -51,10 +51,10 @@ For installation and optional autostart, see [the install guide](docs/INSTALLING
 
 ## DISCLAIMER
 
-- The main target is MATE/Marco on X11. Other setups may or may not work.
+- Remember, the main target is MATE/Marco on X11. Other setups may or may not work.
 - Crepido is still EXPERIMENTAL. Back up your config files and use your own judgment before installing it system-wide.
 - Settings are stored in `~/.config/crepido/`.
-- To install Crepido beyond the build directory, see [the install notes](docs/INSTALLING.md).
+(To install Crepido beyond the build directory, see [the install notes](docs/INSTALLING.md).) 
 
 ## Feedback
 
