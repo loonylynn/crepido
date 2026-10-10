@@ -47,14 +47,13 @@ commands from your Crepido folder if this isn't your first time cloning the repo
 ```
 
 This runs Crepido for your current session without installing it system-wide.
-For installation and optional autostart, see [the install guide](docs/INSTALLING.md).
+(For installation beyond the build dir, and optional autostart, see [the install guide](docs/INSTALLING.md).
 
 ## DISCLAIMER
 
 - Remember, the main target is MATE/Marco on X11. Other setups may or may not work.
 - Crepido is still EXPERIMENTAL. Back up your config files and use your own judgment before installing it system-wide.
 - Settings are stored in `~/.config/crepido/`.
-(To install Crepido beyond the build directory, see [the install notes](docs/INSTALLING.md).) 
 
 ## Feedback
 
