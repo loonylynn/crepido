@@ -14,6 +14,7 @@ It's designed to sit alongside **MATE Panel**, mainly on Debian 13 with MATE/Mar
 - Show and restore minimized windows.
 - Place the Dock on a selected monitor and screen edge.
 - Customize icon size, opacity, and bitmap backgrounds.
+- Includes integration with the MATE workspace switcher.
 
 ## Instructions
 
@@ -51,7 +52,7 @@ For installation and optional autostart, see [the install guide](docs/INSTALLING
 ## DISCLAIMER
 
 - The main target is MATE/Marco on X11. Other setups may or may not work.
-- Crepido is experimental hobby software. Back up your configuration and use your own judgment before installing it system-wide.
+- Crepido is still EXPERIMENTAL. Back up your config files and use your own judgment before installing it system-wide.
 - Settings are stored in `~/.config/crepido/`.
 - To install Crepido beyond the build directory, see [the install notes](docs/INSTALLING.md).
 
